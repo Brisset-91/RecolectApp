@@ -1,10 +1,12 @@
+/* eslint-disable react/style-prop-object */
 
-import './App.css';
+import BusinesTypeForm from './Components/businesTypeForm/businesTypeForm';
 
 function App() {
   return (
     <div className="App">
-  
+      
+    <BusinesTypeForm />
     </div>
   );
 }
