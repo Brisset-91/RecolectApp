@@ -1,4 +1,3 @@
-/* eslint-disable react/style-prop-object */
 import coffeShop from '../../assets/coffee-shop.jpg';
 import barCounter from '../../assets/bar-counter.jpg';
 import restaurant from '../../assets/restaurant.jpg';
@@ -6,11 +5,9 @@ import hotel from '../../assets/hotel.jpg';
 import career from '../../assets/career.jpg';
 import './businesTypeForm.scss'
 
-
-
 //import { ReactComponent as coffe } from '../../assets/coffee-shop.svg';
 
-function BusinesTypeForm (props) {
+const BusinesTypeForm = props => {
     return(
         <div className='card card-princ col-6 col-md-6 mb-3 m-3'>
             <div className='card-title'>

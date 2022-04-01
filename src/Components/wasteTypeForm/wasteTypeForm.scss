@@ -1,0 +1,18 @@
+
+$color-green: #38C746;
+
+.card {
+    max-width: 540px;
+    border-color: $color-green;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+.wasteType {
+    display: flex;
+    justify-content: space-between;
+}
+.card-text {
+    text-align: center;
+    font-size: 1.7rem;
+}
