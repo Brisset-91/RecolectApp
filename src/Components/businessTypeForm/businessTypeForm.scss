@@ -1,0 +1,32 @@
+
+$color-green: #38C746;
+
+.card {
+    border-color: $color-green;
+    border-radius: 12px;
+    width: 300px;
+    height: 350px;
+}
+.card-title {
+    background-color: $color-green;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    color: white;
+    text-align: center;
+    width: 300px;
+    height: 38px;
+
+}
+h6 {
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    padding: 0.6rem;
+}
+.card-text {
+    font-size: 18px; 
+}
+img {
+    width: 48px;
+    height: 48px;
+}
