@@ -36,3 +36,62 @@
     transform: rotate(360deg);
   }
 }
+
+/* Emmed Componentes Styles */
+
+.input-main{
+  background-color: #f5f5f5;
+  color: #a6a6a6;
+  width: 320px;
+  height: 40px;
+  padding-left: 1rem;
+  border: none;
+  border-radius: 12px;
+}
+
+button{
+  border-radius: 12px;
+}
+
+.primary-btn{
+  justify-content: center;
+  align-items: center;
+  width: 280px;
+  height: 64px;
+  gap: 1rem;
+  background-color: white;
+  border: 1px solid #38C746;
+  color: #38C746;
+}
+primary-btn > p {
+  margin: 0;
+  padding: 0;
+}
+
+.secondary-btn{
+  background-color: #38C746;
+  color: white;
+  width: 160px;
+  height: 36px;
+  border: none;
+}
+
+.third-btn{
+  background-color: white;
+  color: #38C746;
+  width: 160px;
+  height: 36px;
+  border: 1px solid #38C746;
+}
+
+.business-card{
+  justify-content: center;
+  align-items: center;
+  width: 320px;
+  height: 64px;
+  border-radius: 12px;
+  border: 1px solid #38C746;
+  gap: 2rem;
+}
+
+/* Emmed Componentes Styles */
