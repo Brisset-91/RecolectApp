@@ -3,7 +3,7 @@ import { Routes, Route } from 'react-router-dom'
 // import { Input } from 'reactstrap';
 // import BusinessCard from './Components/businessCard/businessCard';
 // import CollectConfirmedCard from './Components/collectConfirmedCard/collectConfirmedCard';
-//import RegisterForm from './Components/registerForm/registerForm';
+// import RegisterForm from './Components/registerForm/registerForm';
 // import NavBar from './Components/navbar/navbar';
 // import PrimaryButton from './Components/primaryButton/primaryButton';
 // import SecundaryButton from './Components/secondaryButton/secondaryButton';
