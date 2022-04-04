@@ -1,0 +1,41 @@
+
+$color-green: #38C746;
+
+.titleCollect {
+    width: 320px;
+    height: 40px;
+    display: flex;
+    border: 1px solid $color-green;
+    border-radius: 12px;
+    background: none;
+    font-size: 18px;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+ .inputConfi {
+    border-radius: 1em !important;
+    width: 27px !important;
+    height: 27px !important;
+}
+.form-check-input:checked {
+    background-color: $color-green;
+    border-color: $color-green;
+}
+.content {
+    width: 320px;
+    height: 174px;
+    border-radius: 12px;
+    border: 1px solid $color-green;
+    font-size: 18px;
+
+}
+.inputCollect {
+    font-size: 18px;
+    padding: 0.1rem;
+    background: white !important;
+    padding-left: 1rem;
+}
+.info {
+    padding: 0.5rem;
+}

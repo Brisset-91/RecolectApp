@@ -30,3 +30,16 @@ img {
     width: 48px;
     height: 48px;
 }
+.card-body {
+    justify-content: space-between;
+    background-color: white;
+    border: 0;
+}
+.form-check-input {
+    width: 1.2em;
+    height: 1.2em;
+}
+.form-check-input:checked {
+    background-color: $color-green;
+    border-color: $color-green;
+}

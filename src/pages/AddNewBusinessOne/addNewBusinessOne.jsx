@@ -1,29 +1,34 @@
-//import { BusinesTypeForm } from '../../Components/businessTypeForm/businessTypeForm'
+import { useState } from "react"
 import BusinessTypeForm from '../../Components/businessTypeForm/businessTypeForm'
+import InputBusinessInfo from "../../Components/inputBusinessInfo/inputBusinessInfo"
 import './addNewBusinessOne.scss'
 
-const AddNewBusinessOne = () => {
+
+const AddNewBusinessOne = (props) => {
+    
+
+    const [newBusiness, setNewBusiness] = useState({}) 
+
+    const inputHandler = event => {
+        const value = event.target.value
+        const property = event.target.name
+        setNewBusiness({ ...newBusiness, [property]: value })
+        console.log('value',value)
+        console.log('property',property)
+    }
 
     return (
 
         <div className='container'>
 
             <div className='row'>
-                <form>
-                    <h1 className='title m-3'>FILL THE BUSINESS INFO</h1>
-                    <div className="info mb-3">
-                        <input className="form-control form-control-lg" type="text" placeholder="BUSINESS NAME" aria-label=".form-control-lg example" />
-                    </div>
-                    <div className="info mb-3">
-                        <input className="form-control form-control-lg" type="text" placeholder="BUSINESS LOCATION" aria-label=".form-control-lg example" />
-                    </div>
-                    <div className="info mb-3">
-                        <input className="form-control form-control-lg" type="text" placeholder="BUSINESS TELEPHONE" aria-label=".form-control-lg example" />
-                    </div>
-                    
-                </form>
+                <InputBusinessInfo 
+                    handler={{inputHandler}}
+                />
                 <div className='typeOfBusiness'>
-                    <BusinessTypeForm />
+                    <BusinessTypeForm
+                    handler={{inputHandler}}
+                    />
                 </div>
                 <div className='btnGo mb-3'>
                     <button type="submit" className="btn ">CONTINUE</button>
