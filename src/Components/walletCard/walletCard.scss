@@ -1,0 +1,33 @@
+$color-green: #38C746;
+
+.wallet-card {
+    border: 1px solid $color-green;
+    border-radius: 12px;
+    width: 300px;
+    height: 300px;
+    margin: 1rem;
+}
+.imgWallet{
+    display: flex;
+    justify-content: center;
+    border-bottom: solid 1px $color-green;
+}
+.imgWallet-2  {
+    display: flex;
+    justify-content: center;
+}
+.imgIcon {
+    width: 40px;
+    height: 40px;
+}
+.wallet-card-details {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.amount-detail{
+    margin: 0;
+}
+.wallet-name {
+    font-size: 18px;
+}

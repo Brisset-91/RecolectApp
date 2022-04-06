@@ -1,0 +1,24 @@
+
+$color-green: #38C746;
+$color-input: #FFFBFB;
+
+.history-card {
+    display: flex;
+    flex-direction: column;
+    width: 213px;
+    height: 160px;
+}
+.btn-edit {
+    background-color: $color-green;
+    border-radius: 12px;
+    width: 160px;
+    height: 36px;
+    font-size: 18px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+}
+.btn-save {
+    color: $color-input;
+}

@@ -15,9 +15,7 @@ const TotalPaymentButton = props => {
                     <p className='price'> 62.00 USD</p>
                 </div>
             </div>
-            
         </div>
-        
     )
 }
 

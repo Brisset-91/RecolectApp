@@ -7,21 +7,26 @@ import { Routes, Route } from 'react-router-dom'
 // import NavBar from './Components/navbar/navbar';
 // import PrimaryButton from './Components/primaryButton/primaryButton';
 // import SecundaryButton from './Components/secondaryButton/secondaryButton';
-//import TotalPaymentButton from './Components/totalPaymentButton/totalPaymentButton';
-//import BusinesTypeForm from './Components/businesTypeForm/businesTypeForm';
-//import WasteTypeForm from './Components/wasteTypeForm/wasteTypeForm'
+// import TotalPaymentButton from './Components/totalPaymentButton/totalPaymentButton';
+// import BusinesTypeForm from './Components/businesTypeForm/businesTypeForm';
+// import WasteTypeForm from './Components/wasteTypeForm/wasteTypeForm'
+// import UpdateDateForm from './Components/updateDateForm/updateDateForm';
+// import WalletCard from './Components/walletCard/walletCard';
+// import ContactOfficeCard from './Components/contactOfficeCard/contactOfficeCard';
+// import ProfileSettingForm from './Components/profileSettingForm/profileSettingForm';
+// import BlogCard from './Components/blogCard/blogCard';
 import ThirdButton from './Components/thirdButton/thirdButton';
 import AddNewBusinessOne from './pages/AddNewBusinessOne/addNewBusinessOne'
-import UpdateDateForm from './Components/updateDateForm/updateDateForm';
+import HistoryCard from './Components/historyCard/historyCard';
+
 
 function App() {
   return (
     <div className="App">
       
       <Routes>
-        <Route path='/' element={ < UpdateDateForm /> } />
+        <Route path='/' element={ < HistoryCard/> } />
         <Route path='prueba' element={ < ThirdButton /> } />
-
         <Route path='AddNewBusinessOne' element={<AddNewBusinessOne />} />
       </Routes>
     </div>

@@ -1,0 +1,21 @@
+
+$color-green: #38C746;
+
+.card-contact {
+    margin: 1rem;
+    border: 1px solid $color-green;
+    border-radius: 12px;
+    width: 300px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+
+.img-contact {
+    width: 43px;
+    height: 40px;
+}
+.info-contact {
+    margin: 0.4rem;
+    font-size: 10px;
+}

@@ -1,0 +1,24 @@
+
+$color-green: #38C746;
+$color-input: #F5F5F5;
+$color-input-text: #383838;
+
+.input-profile {
+    border-radius: 12px;
+    width: 320px;
+    height: 40px;
+    font-size: 18px;
+    background: $color-input;
+    color: $color-input-text;
+}
+.imgProfile {
+    border: solid 2px $color-green;
+    width: 142px;
+    height: 142px;
+}
+.imgUser {
+    width: 118px;
+    height: 118px;
+    padding: 0.6rem;
+    margin-top: 0.7rem;
+}
