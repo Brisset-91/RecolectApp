@@ -1,4 +1,58 @@
 
+import { Link } from 'react-router-dom'
+import './navbar.scss'
+
+const Navbar = () => {
+
+  return (
+      
+    <nav className="navbar navbar-expand-sm fixed-top">
+      <div className="container-fluid">
+        <button 
+          className="navbar-toggler" 
+          type="button" 
+          data-bs-toggle="collapse" 
+          data-bs-target="#navbarTogglerDemo03" 
+          aria-controls="navbarTogglerDemo03" 
+          aria-expanded="true" 
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <a className="navbar-brand" href="/AddNewBusinessOne">Navbar</a>
+        <div className="collapse navbar-collapse" id="navbarTogglerDemo03">
+          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+            <li className="nav-item">
+              <Link to='/' className='nav-link'>POCKET</Link>
+            </li>
+            <li className="nav-item">
+              <Link to='/AddNewBusinessOne' className='nav-link'>HISTORY</Link>
+            </li>
+            <li className="nav-item">
+              <Link to='/AddNewBusinessOne' className='nav-link'>PRICING</Link>
+            </li>
+            <li className="nav-item">
+              <Link to='/AddNewBusinessOne' className='nav-link'>PAYMENT</Link>
+            </li>
+            <li className="nav-item">
+              <Link to='/AddNewBusinessOne' className='nav-link'>PROFILE SETTINGS</Link>
+            </li>
+            <li className="nav-item">
+              <Link to='/AddNewBusinessOne' className='nav-link'>NEWSLETTER</Link>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+      
+      
+          
+  )
+}
+
+export default Navbar
+
+
 /*
 import {Nav, Navbar, Container, NavDropdown } from 'reactstrap'
 

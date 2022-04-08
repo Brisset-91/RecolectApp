@@ -13,7 +13,7 @@ const AddNewBusinessOne = (props) => {
     useEffect(() => {
         const token = localStorage.getItem('userToken')
         !token && navigate('/')
-    },[])
+    })
     
 
     const [newBusiness, setNewBusiness] = useState({}) 

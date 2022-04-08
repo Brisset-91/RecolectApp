@@ -8,26 +8,24 @@ const Login = (props) => {
     const [isLogged, setIsLogged] = useState(true)
     const navigate = useNavigate()
 
-    const login = () => {
+    const userLogin = () => {
         alert('Sesión iniciada con éxito, redireccionando!')
 
         //setIsLogged(!isLogged)
         localStorage.setItem('userToken', '1234asdf')
         
         setTimeout(function () {
-            navigate('/AddNewBusinessOne')
+            navigate('/home')
         }, 2000)
     }
 
     return (
-        <div className='container d-flex flex-column justify-content-center align-items-center'>
-            <div>
-                < ImgLogin />
-            </div>
-            <div>
-                < LoginForm inputLogin={{login}} />
-            </div>
-   
+        <div className='container d-flex flex-column  align-items-center'>
+            
+            < ImgLogin />
+        
+            < LoginForm inputLogin={{userLogin}} />
+            
         </div>
     )
 }

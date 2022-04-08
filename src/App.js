@@ -16,8 +16,10 @@ import { Routes, Route } from 'react-router-dom'
 // import ProfileSettingForm from './Components/profileSettingForm/profileSettingForm';
 // import BlogCard from './Components/blogCard/blogCard';
 // import HistoryCard from './Components/historyCard/historyCard';
-import ThirdButton from './Components/thirdButton/thirdButton';
-import AddNewBusinessOne from './pages/AddNewBusinessOne/addNewBusinessOne'
+// import ThirdButton from './Components/thirdButton/thirdButton';
+
+import AddNewBusinessOne from './pages/AddNewBusinessOne/addNewBusinessOne';
+import Home from './pages/Home/home';
 import Login from './pages/Login/login';
 
 
@@ -27,7 +29,7 @@ function App() {
       
       <Routes>
         <Route path='/' element={ < Login /> } />
-        <Route path='prueba' element={ < ThirdButton /> } />
+        <Route path='home' element={ < Home /> }/>
         <Route path='AddNewBusinessOne' element={<AddNewBusinessOne />} />
       </Routes>
     </div>

@@ -22,7 +22,6 @@ const RegisterForm = (props) => {
 
             </div>
             
-   
         </div>
         
     )

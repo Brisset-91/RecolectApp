@@ -1,10 +1,26 @@
-
+import { useEffect } from 'react'
+import RegisterForm from '../registerForm/registerForm'
 
 import './loginForm.scss'
 
 const LoginForm = (props) => {
     
     const { inputLogin } = props
+
+    const token = localStorage.getItem('userToken')
+    console.log( typeof(token) )
+  
+    const register = () => {
+       
+        if (token.length > 1) {
+            console.log(token)
+            return (
+                <RegisterForm />
+            )
+        } else {
+            console.log('hola')
+        }
+    }
 
     return (
         <div className='row '>
@@ -20,9 +36,9 @@ const LoginForm = (props) => {
                 </div>
             </div>
             <div className='btn-container col-12'>
-                <button type="button" className="btn btn-login " onClick={inputLogin.login}>LOGIN</button>
+                <button type="button" className="btn btn-login " onClick={inputLogin.userLogin}>LOGIN</button>
                 <p className='text'>OR</p>
-                <button type="button" className="btn btn-register">REGISTER</button>
+                <button type="button" className="btn btn-register" onClick={register} >REGISTER </button>
             </div>
 
         </div>
