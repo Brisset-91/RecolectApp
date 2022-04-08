@@ -1,0 +1,43 @@
+
+$color-green: #38C746;
+$color-input: #F5F5F5;
+$color-input-text: #A6A6A6;
+
+.date-form{
+    font-size: 18px;
+    background-color: $color-input;
+    color: $color-input-text;
+    border-radius: 12px ;
+    width: 320px;
+    height: 40px;
+    border: 1px solid $color-input;
+}
+.btn-container {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+}
+.btn-login {
+    background-color: $color-green;
+    color: $color-input;
+    border-radius: 12px;
+    width: 160px;
+    height: 36px;
+    font-size: 18px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.btn-register {
+    border: solid 1px $color-green;
+    color: $color-green;
+    border-radius: 12px;
+    width: 160px;
+    height: 36px;
+    font-size: 18px;
+}
+.text {
+    margin: 0;
+    padding: 0;
+    
+    font-size: 8px;
+}

@@ -1,10 +1,19 @@
-import { useState } from "react"
+import { useEffect, useState} from 'react'
+import { useNavigate } from 'react-router-dom'
+
 import BusinessTypeForm from '../../Components/businessTypeForm/businessTypeForm'
 import InputBusinessInfo from "../../Components/inputBusinessInfo/inputBusinessInfo"
 import './addNewBusinessOne.scss'
 
 
 const AddNewBusinessOne = (props) => {
+    
+    const navigate = useNavigate()
+
+    useEffect(() => {
+        const token = localStorage.getItem('userToken')
+        !token && navigate('/')
+    },[])
     
 
     const [newBusiness, setNewBusiness] = useState({}) 
