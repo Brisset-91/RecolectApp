@@ -4,7 +4,7 @@ import ThirdButton from "../../Components/thirdButton/thirdButton"
 const Register = (props) => {
     return (
         <div className='container'>
-            <div className='row m-0 p-0'>
+            <div className='row mt-0 p-0'>
                  <RegisterForm />
             </div>
             <div className='row m-0 p-0'>
