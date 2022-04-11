@@ -4,9 +4,8 @@ import './registerForm.scss'
 const RegisterForm = (props) => { 
 
     return (
-        <div className='row registerForm' >
-            <div className='col-12'>
-                <h1 className='titleRegister font-weight'>REGISTER FORM</h1>
+            <div className='col-12 m-0 p-0 d-flex  flex-column '>
+                <h1 className='titleRegister font-weight d-flex'>REGISTER FORM</h1>
                 <div className='inputRegister mt-4'>
                     <input className="form-control nameRegister" type="text" placeholder="NAME" aria-label="default input example"/>
                 </div>
@@ -22,7 +21,6 @@ const RegisterForm = (props) => {
 
             </div>
             
-        </div>
         
     )
 }

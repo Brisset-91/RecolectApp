@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import ImgLogin from "../../Components/imgLogin/imgLogin"
 import LoginForm from "../../Components/loginForm/loginForm"
+import RegisterForm from '../../Components/registerForm/registerForm'
 import './login.scss'
 
 const Login = (props) => {
@@ -19,12 +20,24 @@ const Login = (props) => {
         }, 2000)
     }
 
+    const register = () => {
+        const token = localStorage.getItem('userToken')
+        console.log( typeof(token) )
+        console.log(token)
+        
+        console.log('click')
+        
+        return  !!token? < RegisterForm/> : console.log('si token')  
+    }
+
     return (
         <div className='container d-flex flex-column  align-items-center'>
             
             < ImgLogin />
         
-            < LoginForm inputLogin={{userLogin}} />
+            < LoginForm 
+            inputLogin={{userLogin}} 
+            />
             
         </div>
     )

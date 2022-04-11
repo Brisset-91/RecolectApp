@@ -19,8 +19,9 @@ import { Routes, Route } from 'react-router-dom'
 // import ThirdButton from './Components/thirdButton/thirdButton';
 
 import AddNewBusinessOne from './pages/AddNewBusinessOne/addNewBusinessOne';
-import Home from './pages/Home/home';
+import Home from './pages/home/home';
 import Login from './pages/Login/login';
+import Register from './pages/register/register';
 
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
     <div className="App">
       
       <Routes>
+        <Route path='register' element={ < Register /> }/>
         <Route path='/' element={ < Login /> } />
         <Route path='home' element={ < Home /> }/>
         <Route path='AddNewBusinessOne' element={<AddNewBusinessOne />} />
