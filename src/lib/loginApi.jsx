@@ -1,7 +1,9 @@
 /* eslint-disable import/no-anonymous-default-export */
 
+
 //const BASE_URL = 'https://recolectapp-b1aa4-default-rtdb.firebaseio.com'
 const BASE_URL = 'http://localhost:8080'
+
 
 export default {
 
@@ -11,6 +13,8 @@ export default {
     },*/
 
     postsUsers: async usersData => {
+       
+
         let response = await fetch(`${BASE_URL}/auth/login`, {
             method: 'POST',
             headers: {
@@ -19,16 +23,21 @@ export default {
             body: JSON.stringify(usersData)
         })
 
-        .then((response)=> {return await response.json()})
+        .then((response)=> response.json())
     
-        .then((data)=>{
-            console.log('succes:',data.token)
-            localStorage.setItem('token',data.token)
+        .then( async (data)=>{
+          
+            console.log('succes:',data.message)
+            
+            localStorage.setItem('token',JSON.stringify(data))
             console.log(data)
+            
             if(data.ok == false) {
                 alert('Invalid Credentials')
                 return
             }
+            
+            return await data
             
         })
     
@@ -36,7 +45,7 @@ export default {
             console.log('error:', error)
         })
 
-        return await response.json()
+       
     },
 
 

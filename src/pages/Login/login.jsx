@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate } from "react-router-dom"
 import ImgLogin from "../../Components/imgLogin/imgLogin"
 import LoginForm from "../../Components/loginForm/loginForm"
 import RegisterForm from '../../Components/registerForm/registerForm'
@@ -34,8 +34,8 @@ const Login = (props) => {
 
     console.log(users) */
 
-    const navigate = useNavigate()
-
+  
+    
     const [token, setToken] = useState({})
 
     const searchInputLogin = event => {
@@ -48,21 +48,31 @@ const Login = (props) => {
 
     console.log(token)
 
+    const navigate = useNavigate()
+
     const saveFormUser = async () => {
         const result = await loginApi.postsUsers(token)
-        console.log(token)
+        console.log(result)
 
-        /*
-        localStorage.clear()
         localStorage.setItem("user", JSON.stringify(token))
+
+
 
         alert('Sesión iniciada con éxito, redireccionando!')
 
-        
-        setTimeout(function () {
-            navigate('/home')
-        }, 2000)*/
+        const token2 = localStorage.getItem(JSON.stringify('token'))
+
+        console.log(token2)
+        // token2 && navigate('/home')
+    
+
     }
+
+   
+
+  
+
+    
     
    // console.log('token',token)
 /*
