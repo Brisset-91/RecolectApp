@@ -1,47 +1,59 @@
 
 import { Link } from 'react-router-dom'
+import user from '../../assets/user 1.jpg';
 import './navbar.scss'
 
 const Navbar = () => {
 
   return (
       
-    <nav className="navbar navbar-expand-sm fixed-top">
+    <nav className=" navbar-prncipal navbar navbar-expand-sm navbar-dark fixed-top d-flex flex-column  align-items-center">
       <div className="container-fluid">
-        <button 
-          className="navbar-toggler" 
-          type="button" 
-          data-bs-toggle="collapse" 
-          data-bs-target="#navbarTogglerDemo03" 
-          aria-controls="navbarTogglerDemo03" 
-          aria-expanded="true" 
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <a className="navbar-brand" href="/AddNewBusinessOne">Navbar</a>
-        <div className="collapse navbar-collapse" id="navbarTogglerDemo03">
-          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-            <li className="nav-item">
-              <Link to='/' className='nav-link'>POCKET</Link>
-            </li>
-            <li className="nav-item">
-              <Link to='/AddNewBusinessOne' className='nav-link'>HISTORY</Link>
-            </li>
-            <li className="nav-item">
-              <Link to='/AddNewBusinessOne' className='nav-link'>PRICING</Link>
-            </li>
-            <li className="nav-item">
-              <Link to='/AddNewBusinessOne' className='nav-link'>PAYMENT</Link>
-            </li>
-            <li className="nav-item">
-              <Link to='/AddNewBusinessOne' className='nav-link'>PROFILE SETTINGS</Link>
-            </li>
-            <li className="nav-item">
-              <Link to='/AddNewBusinessOne' className='nav-link'>NEWSLETTER</Link>
-            </li>
-          </ul>
+        <div>
+          <button 
+            className='navbar-toggler'
+            type='button'
+            data-bs-toggle='collapse'
+            data-bs-target='#navbarNav'
+            aria-controls='navbarNav'
+            aria-expanded='false'
+            aria-label='Toggle navigation'
+          >
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <div className="collapse navbar-collapse" id="navbarNav">
+            <ul className="navbar-nav">
+              <li className="nav-item">
+                <Link to='/AddNewBusinessOne' className="nav-link" >POCKET</Link>
+              </li>
+              <li className="nav-item">
+                <Link to='/AddNewBusinessOne' className='nav-link'>HISTORY</Link>
+              </li>
+              <li className="nav-item">
+                <Link to='/AddNewBusinessOne' className='nav-link'>PRICING</Link>
+              </li>
+              <li className="nav-item">
+                <Link to='/AddNewBusinessOne' className='nav-link'>PAYMENT</Link>
+              </li>
+              <li className="nav-item">
+                <Link to='/AddNewBusinessOne' className='nav-link'>PROFILE SETTINGS</Link>
+              </li>
+              <li className="nav-item">   
+                <Link to='/AddNewBusinessOne' className='nav-link'>NEWSLETTER</Link>
+              </li>
+
+            </ul>
+          </div>
         </div>
+
+        <div>
+          <p className='nameUser '>Hola Brisset</p>
+        </div>
+
+        <div className="" >
+          <img className='rounded-circle' src={user} alt="" />
+        </div>
+
       </div>
     </nav>
       

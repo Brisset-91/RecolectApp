@@ -1,21 +1,20 @@
+import coffeShop from '../../assets/coffee-shop.jpg';
+import './businessCard.scss'
 
-/*
-import {FaBeer} from 'react-icons/fa'
+const BusinessCard = () => {
 
-
-function BusinessCard(props) {
     return (
-    <article className='d-flex business-card'>
-        <div className="business-card-img"><FaBeer /></div>
-        <div className="business-card-info">
-            <p className='p-0 m-0'>Starbucks Cordilleras</p>
-            <p className='p-0 m-0'>Starbucks Cordilleras</p>
+        <div className='d-flex align-items-center'>
+            <div>
+                <img src={coffeShop} alt="" />
+            </div>
+            <div>
+                <h1>Starbucks Cordilleras</h1>
+                <p>Starbucks Cordilleras</p>
+            </div>
+
         </div>
-        <div className="business-card-dots">
-        <FaBeer />
-        </div>
-    </article>
     )
 }
 
-export default BusinessCard */
+export default BusinessCard

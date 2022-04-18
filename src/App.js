@@ -1,4 +1,5 @@
 import { Routes, Route } from 'react-router-dom'
+import Navbar from './Components/navbar/navbar';
 // import PayMethodForm from './Components/payMethodForm/payMethodForm';
 // import { Input } from 'reactstrap';
 // import BusinessCard from './Components/businessCard/businessCard';
@@ -29,6 +30,7 @@ function App() {
     <div className="App">
       
       <Routes>
+      <Route path='prueba' element={< Navbar />} />
         <Route path='register' element={ < Register /> }/>
         <Route path='/' element={ < Login /> } />
         <Route path='home' element={ < Home /> }/>
