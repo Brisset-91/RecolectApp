@@ -60,10 +60,11 @@ const Login = (props) => {
 
         alert('Sesión iniciada con éxito, redireccionando!')
 
-        const token2 = localStorage.getItem(JSON.stringify('token'))
+        const token2 = JSON.parse( localStorage.getItem('token'))
 
         console.log(token2)
-        // token2 && navigate('/home')
+
+        token2.ok == true? navigate('/home') : navigate('/register')
     
 
     }

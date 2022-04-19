@@ -7,12 +7,7 @@ const BASE_URL = 'http://localhost:8080'
 
 export default {
 
-   /* getAllUser: async () => {
-        let response = await fetch(`${BASE_URL}/auth/login`)
-        return await response.json()
-    },*/
-
-    postsUsers: async usersData => {
+     postsUsers: async usersData => {
        
 
         let response = await fetch(`${BASE_URL}/auth/login`, {
