@@ -1,7 +1,9 @@
 import coffeShop from '../../assets/coffee-shop.jpg';
 import './businessCard.scss'
 
-const BusinessCard = () => {
+const BusinessCard = props => {
+    const { business_name, business_location} =props.businessData
+
 
     return (
         <div className='d-flex align-items-center'>
@@ -9,8 +11,8 @@ const BusinessCard = () => {
                 <img src={coffeShop} alt="" />
             </div>
             <div>
-                <h1>Starbucks Cordilleras</h1>
-                <p>Starbucks Cordilleras</p>
+                <h1>{business_name}</h1>
+                <p>{business_location}</p>
             </div>
 
         </div>
