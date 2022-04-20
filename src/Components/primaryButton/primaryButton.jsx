@@ -1,4 +1,5 @@
 
+import { Link } from 'react-router-dom'
 
 const PrimaryButton = (props) => {
 
@@ -13,7 +14,8 @@ const PrimaryButton = (props) => {
                     <rect x="19" y="4" width="24" height="6" rx="2" transform="rotate(90 19 4)" fill="#38C746"/>
                     <circle cx="16" cy="16" r="15" stroke="#38C746" stroke-width="2"/>
                 </svg>
-                <p className="m-0 p-0">ADD NEW BUSINESS</p>
+                <Link to='/AddNewBusiness' className='linkRegister' > ADD NEW BUSINESS </Link>
+               
             </button>
         </div>
 

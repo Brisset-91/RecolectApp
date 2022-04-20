@@ -9,33 +9,6 @@ import './login.scss'
 
 const Login = (props) => {
 
-    /*
-    const [isLogged, setIsLogged] = useState(true)
-   
-
-    const register = () => {
-        const token = localStorage.getItem('userToken')
-        console.log( typeof(token) )
-        console.log(token)
-        
-        console.log('click')
-        
-        return  !!token? < RegisterForm/> : console.log('si token')  
-    } 
-    
-
-    const [users, setUsers] = useState({})
-
-    useEffect(async () => {
-        let dataUser = await loginApi.getAllUser()
-        setUsers(dataUser)
-
-    }, [])
-
-    console.log(users) */
-
-  
-    
     const [token, setToken] = useState({})
 
     const searchInputLogin = event => {
@@ -56,8 +29,6 @@ const Login = (props) => {
 
         localStorage.setItem("user", JSON.stringify(token))
 
-
-
         alert('Sesión iniciada con éxito, redireccionando!')
 
         const token2 = JSON.parse( localStorage.getItem('token'))
@@ -65,41 +36,8 @@ const Login = (props) => {
         console.log(token2)
 
         token2.ok == true? navigate('/home') : navigate('/register')
-    
-
     }
-
-   
-
   
-
-    
-    
-   // console.log('token',token)
-/*
-    const userLogin = () => {
-
-        let dataUsers = Object.keys(users)
-
-        dataUsers.forEach(element => {
-            const user = users[element]
-
-            console.log(user)
-        });
-
-       // console.log(dataUsers)
-     
-        
-        
-        alert('SesiuserLoginón iniciada con éxito, redireccionando!')
-
-        localStorage.setItem('userToken', '1234asdf')
-        setTimeout(function () {
-            navigate('/home')
-        }, 2000)
-    }*/
-
-   
 
     return (
         <div className='container d-flex flex-column  align-items-center'>

@@ -7,66 +7,90 @@ import grease from '../../assets/waterTypeForm/sin-grasa 1.jpg';
 import './wasteTypeForm.scss'
 
 
-const BusinesTypeForm = props => {
+const WasteTypeForm = props => {
+    const { handler } = props
+
     return(
-        <div className='card col-6 col-md-6 mb-3 m-3'>
+
+        <div className='card-wasteType col-12 col-md-12 mb-3 m-3'>
+            
+            <h1 className='card-title-wasteType'>SELECT THE TYPE OF WASTE</h1>
+           
             <div className=" mb-3 m-3 p-3">
                 <div className="wasteType row g-0 mb-5">
-                    <div className="col-md-4" >
+                    <div className="col-md-4 btn-wasteType"  >
                         <div>
                             <img src={oil} alt="" />
                         </div>
-                        <div className="card-body">
-                            <p className="card-text">Oil</p>
+                        <div className="input-group-text card-body">
+                            <span className=" card-text-wasteType ">Oil</span>
+                            <div className="inputCheck">
+                                <input className="form-check-input mt-0" type="checkbox" value="oil" aria-label="Checkbox for following text input" name="business_waste_typeof" onChange={handler.newWasteType} />
+                            </div>
                         </div>
                     </div>
 
-                    <div className="col-md-4" >
+                    <div className="col-md-4 btn-wasteType" >
                         <div>
                             <img src={cans} alt="" />
                         </div>
-                        <div className="card-body">
-                            <p className="card-text">Cans</p>
+                        <div className="input-group-text card-body">
+                            <span className=" card-text-wasteType ">Cans</span>
+                            <div className="inputCheck">
+                                <input className="form-check-input mt-0" type="checkbox" value="cans" aria-label="Checkbox for following text input" name="business_waste_typeof" onChange={handler.newWasteType} />
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <div className="wasteType row g-0 mb-5">
-                    <div className="col-md-4" >
+                    <div className="col-md-4 btn-wasteType" >
                         <div>
                             <img src={plastic} alt="" />
                         </div>
-                        <div className="card-body">
-                            <p className="card-text">Plastic</p>
+                        <div className="input-group-text card-body">
+                            <span className=" card-text-wasteType ">Plastic</span>
+                            <div className="inputCheck">
+                                <input className="form-check-input mt-0" type="checkbox" value="plastic" aria-label="Checkbox for following text input" name="business_waste_typeof" onChange={handler.newWasteType} />
+                            </div>
                         </div>
                     </div>
 
-                    <div className="col-md-4" >
+                    <div className="col-md-4 btn-wasteType" >
                         <div>
                             <img src={carton} alt="" />
                         </div>
-                        <div className="card-body">
-                            <p className="card-text">Carton</p>
+                        <div className="input-group-text card-body">
+                            <span className=" card-text-wasteType ">Carton</span>
+                            <div className="inputCheck">
+                                <input className="form-check-input mt-0" type="checkbox" value="carton" aria-label="Checkbox for following text input" name="business_waste_typeof" onChange={handler.newWasteType} />
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <div className="wasteType row g-0">
-                    <div className="col-md-4" >
+                    <div className="col-md-4 btn-wasteType" >
                         <div>
                             <img src={glass} alt="" />
                         </div>
-                        <div className="card-body">
-                            <p className="card-text">Glass</p>
+                        <div className="input-group-text card-body">
+                            <span className=" card-text-wasteType ">Glass</span>
+                            <div className="inputCheck">
+                                <input className="form-check-input mt-0" type="checkbox" value="glass" aria-label="Checkbox for following text input" name="business_waste_typeof" onChange={handler.newWasteType} />
+                            </div>
                         </div>
                     </div>
 
-                    <div className="col-md-4" >
+                    <div className="col-md-4 btn-wasteType" >
                         <div>
                             <img src={grease} alt="" />
                         </div>
-                        <div className="card-body">
-                            <p className="card-text">Grease</p>
+                        <div className="input-group-text card-body">
+                            <span className=" card-text-wasteType ">Grease</span>
+                            <div className="inputCheck">
+                                <input className="form-check-input mt-0" type="checkbox" value="grease" aria-label="Checkbox for following text input" name="business_waste_typeof" onChange={handler.newWasteType} />
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -77,4 +101,4 @@ const BusinesTypeForm = props => {
 
 };
 
-export default BusinesTypeForm
+export default WasteTypeForm

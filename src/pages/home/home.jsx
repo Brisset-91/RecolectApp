@@ -11,15 +11,38 @@ import businessApi from "../../lib/businessApi"
 const Home = () => {
     const navigate = useNavigate()
 
-    const [business, setBusiness] = useState({})
+    const [business, setBusiness] = useState(null)
     
-    useEffect(async () => {
-        let dataBusiness = await businessApi.getAllBusiness()
-        setBusiness(dataBusiness)
+    useEffect( () => {
+
+        let bringBusiness = async ()=> {
+
+            let dataBusiness = await businessApi.getAllBusiness()
+            setBusiness(dataBusiness)
+
+        } 
+
+        bringBusiness()
+        /*Object.values(dataBusiness.getBussines).forEach(element => {
+            console.log(element)
+            console.log(element.business_name)
+        });*/
 
     }, [])
     
-    console.log(business) 
+
+
+/**
+ * 
+ * let dataBus = Object.values(business.getBussines)
+        console.log(dataBus)
+    
+    Object.values(business.getBussines).forEach(element => {
+        console.log(element.business_name)
+    });
+
+ */
+
 
 /*
     useEffect(() => {
@@ -33,30 +56,24 @@ const Home = () => {
                 < Navbar />
             </div>
             <div className=" row d-flex ">
-                < ContTextHome />
+                {
+                    business && !business.getBussines.length && < ContTextHome />
+                }
             </div>
 
-            <div className=" row d-flex ">
-           
+            <div className=" row d-flex " style={{marginTop: "5rem"}}>
                 {
-                    Object.keys(business.getBussines).forEach(key => {
-                        console.log(key)
-
+                    business && !!business.getBussines.length && business.getBussines.map(valueBusiness=>{
                         return (
-                            < BusinessCard 
-                                key = {key}
-                                businessData = {{...business[key]}}
+                            <BusinessCard
+                                 business={valueBusiness}
                             /> 
-                            
                         )
-
                     })
                 }
             </div>
             
             <div className='row'>
-                
-
                 < PrimaryButton />
             </div>
        

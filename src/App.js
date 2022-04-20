@@ -19,7 +19,7 @@ import Navbar from './Components/navbar/navbar';
 // import HistoryCard from './Components/historyCard/historyCard';
 // import ThirdButton from './Components/thirdButton/thirdButton';
 
-import AddNewBusinessOne from './pages/AddNewBusinessOne/addNewBusinessOne';
+import AddNewBusiness from './pages/AddNewBusiness/addNewBusiness';
 import Home from './pages/home/home';
 import Login from './pages/Login/login';
 import Register from './pages/register/register';
@@ -30,11 +30,11 @@ function App() {
     <div className="App">
       
       <Routes>
-      <Route path='prueba' element={< Navbar />} />
+        <Route path='prueba' element={< Navbar />} />
         <Route path='register' element={ < Register /> }/>
         <Route path='/' element={ < Login /> } />
         <Route path='home' element={ < Home /> }/>
-        <Route path='AddNewBusinessOne' element={<AddNewBusinessOne />} />
+        <Route path='AddNewBusiness' element={<AddNewBusiness />} />
       </Routes>
     </div>
   );

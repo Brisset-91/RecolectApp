@@ -1,18 +1,25 @@
 
 $color-green: #38C746;
 
-.card {
+.card-title-wasteType {
+    font-size: 1.3rem;
+    color: $color-green;
+}
+.card-wasteType {
     max-width: 540px;
     border-color: $color-green;
     border-bottom-left-radius: 12px;
     border-bottom-right-radius: 12px;
 }
-
 .wasteType {
     display: flex;
     justify-content: space-between;
 }
-.card-text {
+.btn-wasteType {
+    width: 50%;
+
+}
+.card-text-wasteType {
     text-align: center;
     font-size: 1.7rem;
 }
