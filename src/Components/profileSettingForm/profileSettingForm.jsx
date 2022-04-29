@@ -4,7 +4,7 @@ import './profileSettingForm.scss'
 const ProfileSettingForm = () => {
     return (
         <div className='row m-2 d-flex justify-content-center align-items-center' >
-                <div className="imgProfile rounded-circle" >
+                <div className="imgProfileSetting  rounded-circle" >
                     <img className='imgUser' src={user} alt="" />
                 </div>
                 <div>

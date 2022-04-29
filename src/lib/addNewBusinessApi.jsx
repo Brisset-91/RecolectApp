@@ -1,13 +1,13 @@
 /* eslint-disable import/no-anonymous-default-export */
 
-const BASE_URL = 'http://localhost:8080'
-
-const token = JSON.parse( localStorage.getItem('token'))
-console.log(token.id)
+const BASE_URL = 'https://recolectappi-anxious-dugong-ea.mybluemix.net'
 
 export default {
 
     saveAddNewBusiness: async bisinessData => {
+
+        const token = JSON.parse( localStorage.getItem('token'))
+        
         let response = await fetch(`${BASE_URL}/business`, {
             method: 'POST',
             headers: {

@@ -7,7 +7,7 @@ import './businessTypeForm.scss'
 //import { ReactComponent as coffe } from '../../assets/coffee-shop.svg';
 
 const BusinessTypeForm = props => {
-    const { handler, value } = props
+    const { handlerBusinesType, value } = props
 
     return(
         <div className='card mb-3 '>
@@ -25,7 +25,7 @@ const BusinessTypeForm = props => {
                             <div className="inputCheck">
                                 <input className="form-check-input mt-0" type="radio" value="coffeShop" 
                                 checked = {value === "coffeShop" }
-                                aria-label="Checkbox for following text input" name="business_typeof" onChange={handler.inputHandler} />
+                                aria-label="Checkbox for following text input" name="business_typeof" onChange={handlerBusinesType} />
                             </div>
                         </div>
                     </div>
@@ -41,7 +41,7 @@ const BusinessTypeForm = props => {
                             <div className="inputCheck">
                                 <input className="form-check-input mt-0" type="radio" value="bar/club" 
                                  checked = {value === "bar/club" }
-                                aria-label="Checkbox for following text input" name="business_typeof" onChange={handler.inputHandler} />
+                                aria-label="Checkbox for following text input" name="business_typeof" onChange={handlerBusinesType} />
                             </div>
                         </div>
                     </div>
@@ -57,7 +57,7 @@ const BusinessTypeForm = props => {
                             <div className="inputCheck">
                                 <input className="form-check-input mt-0" type="radio" value="restaurant" 
                                 checked = {value === "restaurant" }
-                                aria-label="Checkbox for following text input" name="business_typeof" onChange={handler.inputHandler} />
+                                aria-label="Checkbox for following text input" name="business_typeof" onChange={handlerBusinesType} />
                             </div>
                         </div>
                     </div>
@@ -73,7 +73,7 @@ const BusinessTypeForm = props => {
                             <div className="inputCheck">
                                 <input className="form-check-input mt-0" type="radio" value="hotel" 
                                 checked = {value === "hotel" }
-                                aria-label="Checkbox for following text input" name="business_typeof" onChange={handler.inputHandler} />
+                                aria-label="Checkbox for following text input" name="business_typeof" onChange={handlerBusinesType} />
                             </div>
                         </div>
                     </div>
@@ -88,7 +88,7 @@ const BusinessTypeForm = props => {
                             <div className="inputCheck">
                                 <input className="form-check-input mt-0" type="radio" value="anotherBusiness"
                                 checked = {value === "anotherBusiness" }
-                                aria-label="Checkbox for following text input" name="business_typeof" onChange={handler.inputHandler} />
+                                aria-label="Checkbox for following text input" name="business_typeof" onChange={handlerBusinesType} />
                             </div>
                         </div>
                     </div>

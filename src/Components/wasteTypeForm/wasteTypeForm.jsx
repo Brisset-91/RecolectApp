@@ -11,7 +11,6 @@ const WasteTypeForm = props => {
     const { handler } = props
 
     return(
-
         <div className='card-wasteType col-12 col-md-12 mb-3 m-3'>
             
             <h1 className='card-title-wasteType'>SELECT THE TYPE OF WASTE</h1>
@@ -25,7 +24,7 @@ const WasteTypeForm = props => {
                         <div className="input-group-text card-body">
                             <span className=" card-text-wasteType ">Oil</span>
                             <div className="inputCheck">
-                                <input className="form-check-input mt-0" type="checkbox" value="oil" aria-label="Checkbox for following text input" name="business_waste_typeof" onChange={handler.newWasteType} />
+                                <input className="form-check-input mt-0" type="checkbox" value="oil" aria-label="Checkbox for following text input" name="waste_typeof "  onChange={handler} />
                             </div>
                         </div>
                     </div>
@@ -37,7 +36,7 @@ const WasteTypeForm = props => {
                         <div className="input-group-text card-body">
                             <span className=" card-text-wasteType ">Cans</span>
                             <div className="inputCheck">
-                                <input className="form-check-input mt-0" type="checkbox" value="cans" aria-label="Checkbox for following text input" name="business_waste_typeof" onChange={handler.newWasteType} />
+                                <input className="form-check-input mt-0" type="checkbox" value="cans" aria-label="Checkbox for following text input" name="waste_typeof" onChange={handler} />
                             </div>
                         </div>
                     </div>
@@ -51,7 +50,7 @@ const WasteTypeForm = props => {
                         <div className="input-group-text card-body">
                             <span className=" card-text-wasteType ">Plastic</span>
                             <div className="inputCheck">
-                                <input className="form-check-input mt-0" type="checkbox" value="plastic" aria-label="Checkbox for following text input" name="business_waste_typeof" onChange={handler.newWasteType} />
+                                <input className="form-check-input mt-0" type="checkbox" value="plastic" aria-label="Checkbox for following text input" name="waste_typeof" onChange={handler} />
                             </div>
                         </div>
                     </div>
@@ -63,7 +62,7 @@ const WasteTypeForm = props => {
                         <div className="input-group-text card-body">
                             <span className=" card-text-wasteType ">Carton</span>
                             <div className="inputCheck">
-                                <input className="form-check-input mt-0" type="checkbox" value="carton" aria-label="Checkbox for following text input" name="business_waste_typeof" onChange={handler.newWasteType} />
+                                <input className="form-check-input mt-0" type="checkbox" value="carton" aria-label="Checkbox for following text input" name="waste_typeof" onChange={handler} />
                             </div>
                         </div>
                     </div>
@@ -77,7 +76,7 @@ const WasteTypeForm = props => {
                         <div className="input-group-text card-body">
                             <span className=" card-text-wasteType ">Glass</span>
                             <div className="inputCheck">
-                                <input className="form-check-input mt-0" type="checkbox" value="glass" aria-label="Checkbox for following text input" name="business_waste_typeof" onChange={handler.newWasteType} />
+                                <input className="form-check-input mt-0" type="checkbox" value="glass" aria-label="Checkbox for following text input" name="waste_typeof" onChange={handler} />
                             </div>
                         </div>
                     </div>
@@ -89,7 +88,7 @@ const WasteTypeForm = props => {
                         <div className="input-group-text card-body">
                             <span className=" card-text-wasteType ">Grease</span>
                             <div className="inputCheck">
-                                <input className="form-check-input mt-0" type="checkbox" value="grease" aria-label="Checkbox for following text input" name="business_waste_typeof" onChange={handler.newWasteType} />
+                                <input className="form-check-input mt-0" type="checkbox" value="grease" aria-label="Checkbox for following text input" name="waste_typeof" onChange={handler} />
                             </div>
                         </div>
                     </div>
@@ -98,7 +97,6 @@ const WasteTypeForm = props => {
             </div>
         </div>
     );
-
 };
 
 export default WasteTypeForm

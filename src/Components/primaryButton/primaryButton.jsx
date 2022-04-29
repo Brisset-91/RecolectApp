@@ -14,7 +14,7 @@ const PrimaryButton = (props) => {
                     <rect x="19" y="4" width="24" height="6" rx="2" transform="rotate(90 19 4)" fill="#38C746"/>
                     <circle cx="16" cy="16" r="15" stroke="#38C746" stroke-width="2"/>
                 </svg>
-                <Link to='/AddNewBusiness' className='linkRegister' > ADD NEW BUSINESS </Link>
+                <Link to='/addNewBusiness' className='linkRegister' > ADD NEW BUSINESS </Link>
                
             </button>
         </div>

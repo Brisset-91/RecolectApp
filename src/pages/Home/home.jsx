@@ -19,7 +19,6 @@ const Home = () => {
 
             let dataBusiness = await businessApi.getAllBusiness()
             setBusiness(dataBusiness)
-
         } 
 
         bringBusiness()
