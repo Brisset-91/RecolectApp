@@ -5,8 +5,6 @@ import InputBusinessInfo from "../../Components/inputBusinessInfo/inputBusinessI
 import Navbar from '../../Components/navbar/navbar'
 import WasteTypeForm from '../../Components/wasteTypeForm/wasteTypeForm'
 import addNewBusinessApi from '../../lib/addNewBusinessApi'
-import './addNewBusiness.scss'
-
 
 const AddNewBusiness = () => {
     
@@ -33,7 +31,7 @@ const AddNewBusiness = () => {
             }
             
         }else {
-            setNewBusiness({ ...newBusiness, [property]: value, 'user':token.id })
+            setNewBusiness({ ...newBusiness, [property]: value, 'user':token.userToken.id })
         }
     }
 

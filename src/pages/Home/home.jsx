@@ -19,36 +19,14 @@ const Home = () => {
 
             let dataBusiness = await businessApi.getAllBusiness()
             setBusiness(dataBusiness)
+
+            localStorage.setItem('dataBusiness',JSON.stringify(dataBusiness))
         } 
 
         bringBusiness()
-        /*Object.values(dataBusiness.getBussines).forEach(element => {
-            console.log(element)
-            console.log(element.business_name)
-        });*/
 
     }, [])
     
-
-
-/**
- * 
- * let dataBus = Object.values(business.getBussines)
-        console.log(dataBus)
-    
-    Object.values(business.getBussines).forEach(element => {
-        console.log(element.business_name)
-    });
-
- */
-
-
-/*
-    useEffect(() => {
-        const token = JSON.parse( localStorage.getItem('token'))
-        !token && navigate('/')
-    })
-*/
     return (
         <div className='container'>
             <div className='row'>

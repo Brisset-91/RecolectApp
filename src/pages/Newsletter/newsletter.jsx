@@ -1,7 +1,7 @@
 import BlogCard from "../../Components/blogCard/blogCard"
 
 
-const ProfileSettings = () => {
+const Newsletter = () => {
     return (
         <div>
             <BlogCard />
@@ -9,4 +9,4 @@ const ProfileSettings = () => {
     )
 }
 
-export default ProfileSettings
+export default Newsletter

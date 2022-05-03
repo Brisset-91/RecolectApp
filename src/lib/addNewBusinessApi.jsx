@@ -4,7 +4,7 @@ const BASE_URL = 'https://recolectappi-anxious-dugong-ea.mybluemix.net'
 
 export default {
 
-    saveAddNewBusiness: async bisinessData => {
+    saveAddNewBusiness: async businessData => {
 
         const token = JSON.parse( localStorage.getItem('token'))
         
@@ -12,9 +12,9 @@ export default {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                Authorization:`Bearer ${token.user}` 
+                Authorization:`Bearer ${token.userToken.token}` 
             },
-            body: JSON.stringify(bisinessData)
+            body: JSON.stringify(businessData)
         })
         return await response.json()
     },

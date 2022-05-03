@@ -25,9 +25,6 @@ const Login = (props) => {
 
     const saveFormUser = async () => {
         const result = await loginApi.postsUsers(token)
-        console.log(result)
-
-        localStorage.setItem("user", JSON.stringify(token))
 
         alert('Sesión iniciada con éxito, redireccionando!')
 

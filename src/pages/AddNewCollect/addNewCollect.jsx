@@ -22,6 +22,9 @@ const AddNewCollect = (props) => {
     const [newCollect, setNewCollect] = useState({waste_typeof:[],"collect_status": false}) 
     
     const token = JSON.parse( localStorage.getItem('token'))
+    const allBusiness = JSON.parse( localStorage.getItem('dataBusiness'))
+    console.log(allBusiness.getBussines)
+    console.log(allBusiness.getBussines._id)
     
     const inputHandlerNewCollect = event => {
         const value = event.target.value

@@ -24,6 +24,7 @@ import AddNewCollect from './pages/AddNewCollect/addNewCollect';
 import History from './pages/History/history';
 import Home from './pages/Home/home';
 import Login from './pages/Login/login';
+import Newsletter from './pages/Newsletter/newsletter';
 import Payment from './pages/Payment/Payment';
 import Pocket from './pages/Pocket/pocket';
 import Pricing from './pages/Pricing/pricing';
@@ -35,7 +36,6 @@ function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path='prueba' element={< Navbar />} />
         <Route path='register' element={ < Register /> }/>
         <Route path='/' element={ < Login /> } />
         <Route path='home' element={ < Home /> }/>
@@ -47,7 +47,7 @@ function App() {
         <Route path='pricing' element={<Pricing />} />
         <Route path='payment' element={<Payment />} />
         <Route path='profileSettings' element={<ProfileSettings />} />
-        <Route path='newsletter' element={<AddNewCollect />} />
+        <Route path='newsletter' element={<Newsletter />} />
 
       </Routes>
     </div>
