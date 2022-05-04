@@ -1,6 +1,7 @@
-import { Dropdown } from "reactstrap"
+import Dropdown from 'react-bootstrap/Dropdown'
 
 import coffeShop from '../../assets/coffee-shop.jpg';
+import Modals from '../modal/modal';
 import './businessCard.scss'
 
 const BusinessCard = ({business}) => {
@@ -18,13 +19,19 @@ const BusinessCard = ({business}) => {
             </div>
             <Dropdown>
                 <Dropdown.Toggle variant="success" id="dropdown-basic">
-                    Dropdown Button
+                    Options
                 </Dropdown.Toggle>
 
                 <Dropdown.Menu>
-                    <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                    <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                    <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+                    <Dropdown.Item href="/addNewCollect">Add collect</Dropdown.Item>
+                    <Dropdown.Item href="#/action-2">Edit information</Dropdown.Item>
+                    <Dropdown.Item href="/history">Collection history</Dropdown.Item>
+                    <Dropdown.Item href="#/action-3">Reschedule collect</Dropdown.Item>
+                    <Dropdown.Item >Erase
+                        <Modals 
+                        
+                        />
+                    </Dropdown.Item>
                 </Dropdown.Menu>
             </Dropdown>
 
