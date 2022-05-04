@@ -21,7 +21,7 @@ const LoginForm = (props) => {
                 </div>
             </div>
             <div className='btn-container col-12'>
-                <button type="button" className="btn btn-login " onClick={inputSearch.saveFormUser}>LOGIN</button>
+                <button type="button" className="btn btn-login " onClick={inputSearch}>LOGIN</button>
                 <p className='text'>OR</p>
                <button type="button" className="btn btn-register" ><Link to='/register' className='linkRegister' > REGISTER </Link> </button>
                 

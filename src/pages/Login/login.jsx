@@ -42,7 +42,7 @@ const Login = (props) => {
             < ImgLogin />
         
             < LoginForm 
-                inputSearch={{saveFormUser}} 
+                inputSearch={saveFormUser} 
                 inputLogin= {{searchInputLogin}}
             />
             

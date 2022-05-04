@@ -45,7 +45,7 @@ const AddNewCollect = (props) => {
     }
     console.log(newCollect)
 
-    
+
 
 
     return (
@@ -74,8 +74,7 @@ const AddNewCollect = (props) => {
                             <button type="button" className="btn " onClick={decrementStep}>Previous</button>
                         </div>
                     </div> 
-                 
-                 )
+                )
             }
              {
                 step === 3 && ( 

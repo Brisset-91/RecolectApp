@@ -14,18 +14,21 @@ const Home = () => {
     const [business, setBusiness] = useState(null)
     
     useEffect( () => {
-
         let bringBusiness = async ()=> {
-
             let dataBusiness = await businessApi.getAllBusiness()
             setBusiness(dataBusiness)
 
             localStorage.setItem('dataBusiness',JSON.stringify(dataBusiness))
         } 
-
         bringBusiness()
-
     }, [])
+    console.log(business)
+
+    const dataId = event => {
+        const value = event.target.value
+        
+        console.log('value',value)
+    }
     
     return (
         <div className='container'>
@@ -43,7 +46,8 @@ const Home = () => {
                     business && !!business.getBussines.length && business.getBussines.map(valueBusiness=>{
                         return (
                             <BusinessCard
-                                 business={valueBusiness}
+                                business={valueBusiness}
+                                idBusiness={dataId}
                             /> 
                         )
                     })
