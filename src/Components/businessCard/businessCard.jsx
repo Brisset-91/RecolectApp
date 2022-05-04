@@ -28,9 +28,7 @@ const BusinessCard = ({business}) => {
                     <Dropdown.Item href="/history">Collection history</Dropdown.Item>
                     <Dropdown.Item href="#/action-3">Reschedule collect</Dropdown.Item>
                     <Dropdown.Item >Erase
-                        <Modals 
-                        
-                        />
+                      
                     </Dropdown.Item>
                 </Dropdown.Menu>
             </Dropdown>

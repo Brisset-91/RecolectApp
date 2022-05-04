@@ -37,7 +37,7 @@ const Modals = () => {
         );
     }
     
-    render (<Example />);
+    //render (<Example />);
 }
 
 export default Modals

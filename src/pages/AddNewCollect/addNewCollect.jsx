@@ -45,6 +45,8 @@ const AddNewCollect = (props) => {
     }
     console.log(newCollect)
 
+    
+
 
     return (
         <div className='container'>
