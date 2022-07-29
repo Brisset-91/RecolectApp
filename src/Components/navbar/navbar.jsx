@@ -1,12 +1,53 @@
 
+import React from 'react';
+import Navbar from 'react-bootstrap/Navbar'
+import {Container,Nav,Offcanvas,NavDropdown,Form,FormControl,Button} from 'react-bootstrap'
+
 import { Link } from 'react-router-dom'
 import user from '../../assets/user 1.jpg';
 import './navbar.scss'
 
-const Navbar = () => {
+const MenuNavbar = () => {
 
   return (
-      
+
+  
+
+<div>
+
+  {[false].map((expand) => (
+    <Navbar key={expand} bg="light" expand={expand} className="mb-3">
+      <Container fluid>
+        <Navbar.Brand href="#">Navbar Offcanvas</Navbar.Brand>
+        <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
+        <Navbar.Offcanvas
+          id={`offcanvasNavbar-expand-${expand}`}
+          aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
+          placement="end"
+        >
+          <Offcanvas.Header closeButton>
+            <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
+              Offcanvas
+            </Offcanvas.Title>
+          </Offcanvas.Header>
+          <Offcanvas.Body>
+            <Nav className="justify-content-end flex-grow-1 pe-3">
+              <Link to='/pocket' className="nav-link" >POCKET</Link>
+              <Link to='/history' className='nav-link'>HISTORY</Link>
+              <Link to='/pricing' className='nav-link'>PRICING</Link>
+              <Link to='/payment' className='nav-link'>PAYMENT</Link>
+              <Link to='/profileSettings' className='nav-link'>PROFILE SETTINGS</Link>
+              <Link to='/newsletter' className='nav-link'>NEWSLETTER</Link>
+            </Nav>
+          </Offcanvas.Body>
+        </Navbar.Offcanvas>
+      </Container>
+    </Navbar>
+  ))}
+</div>
+
+
+    /*  
     <nav className=" navbar-prncipal navbar navbar-expand-sm navbar-dark fixed-top d-flex flex-column  align-items-center">
       <div className="container-fluid">
         <div>
@@ -55,48 +96,11 @@ const Navbar = () => {
         </div>
 
       </div>
-    </nav>
+    </nav>*/
       
       
           
   )
 }
 
-export default Navbar
-
-
-/*
-import {Nav, Navbar, Container, NavDropdown } from 'reactstrap'
-
-function NavBar(props) {
-    return (
-        <Navbar collapseOnSelect expand="lg" >
-        <Container>
-        <Navbar.Brand href="#home">Recolect App</Navbar.Brand>
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="me-auto">
-          <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
-            </NavDropdown>
-            <Nav.Link href="#features">Features</Nav.Link>
-            <Nav.Link href="#pricing">Pricing</Nav.Link>
-            
-          </Nav>
-          <Nav>
-            <Nav.Link href="#deets">More deets</Nav.Link>
-            <Nav.Link eventKey={2} href="#memes">
-              Dank memes
-            </Nav.Link>
-          </Nav>
-        </Navbar.Collapse>
-        </Container>
-      </Navbar>
-    )
-}
-
-export default NavBar */
+export default MenuNavbar

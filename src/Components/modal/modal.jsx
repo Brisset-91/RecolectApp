@@ -1,14 +1,11 @@
 import { useState } from "react"
 import React, { Component } from "react";
 
-
 import Modal from 'react-bootstrap/Modal'
 import Button from 'react-bootstrap/Button'
 
 const Modals = () => {
-
-    function Example() {
-        const [show, setShow] = useState(false);
+         const [show, setShow] = useState(false);
       
         const handleClose = () => setShow(false);
         const handleShow = () => setShow(true);
@@ -37,7 +34,7 @@ const Modals = () => {
         );
     }
     
-    //render (<Example />);
-}
+   
+
 
 export default Modals

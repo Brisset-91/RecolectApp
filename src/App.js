@@ -1,7 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Routes, Route } from 'react-router-dom'
-import Navbar from './Components/navbar/navbar';
-
 
 import AddNewBusiness from './pages/AddNewBusiness/addNewBusiness';
 import AddNewCollect from './pages/AddNewCollect/addNewCollect';
@@ -27,7 +25,7 @@ function App() {
         <Route path='addNewCollect' element={<AddNewCollect />} />
 
         <Route path='pocket' element={<Pocket/>} />
-        <Route path='history' element={<History />} />
+        <Route path='collect' element={<History />} />
         <Route path='pricing' element={<Pricing />} />
         <Route path='payment' element={<Payment />} />
         <Route path='profileSettings' element={<ProfileSettings />} />

@@ -2,12 +2,11 @@ import { useEffect, useState} from 'react'
 import { useNavigate } from 'react-router-dom'
 import BusinessTypeForm from '../../Components/businessTypeForm/businessTypeForm'
 import InputBusinessInfo from "../../Components/inputBusinessInfo/inputBusinessInfo"
-import Navbar from '../../Components/navbar/navbar'
+import MenuNavbar from '../../Components/navbar/navbar'
 import WasteTypeForm from '../../Components/wasteTypeForm/wasteTypeForm'
 import addNewBusinessApi from '../../lib/addNewBusinessApi'
 
 const AddNewBusiness = () => {
-    
     const navigate = useNavigate()
 
     useEffect(() => {
@@ -29,12 +28,10 @@ const AddNewBusiness = () => {
             }else {
                 setNewBusiness({...newBusiness,['waste_typeof']: [...newBusiness['waste_typeof'], value]})
             }
-            
         }else {
             setNewBusiness({ ...newBusiness, [property]: value, 'user':token.userToken.id })
         }
     }
-
     console.log(newBusiness)
     
     const newAddNewBusiness = async () => {
@@ -48,10 +45,10 @@ const AddNewBusiness = () => {
 
     return (
         <div className='container'>
-            <Navbar />
+            <MenuNavbar />
             {
                 step === 1 &&
-               ( <div className='row'style={{marginTop: "5rem"}}>
+               ( <div className='row'>
                     <InputBusinessInfo 
                         handlerInfo={inputHandler}
                     />
@@ -67,10 +64,9 @@ const AddNewBusiness = () => {
                 </div>
                 )
             }
-
             {
                 step === 2 && ( 
-                    <div className='row ' style={{marginTop: "5rem"}}> 
+                    <div className='row'>
                         <WasteTypeForm 
                             handler={inputHandler}
                         />

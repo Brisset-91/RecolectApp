@@ -1,5 +1,4 @@
 /* eslint-disable import/no-anonymous-default-export */
-
 const BASE_URL = 'https://recolectappi-anxious-dugong-ea.mybluemix.net'
 
 export default {

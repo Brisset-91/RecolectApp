@@ -1,15 +1,19 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState} from "react"
-import { useNavigate } from "react-router-dom"
 import BusinessCard from "../../Components/businessCard/businessCard"
 import ContTextHome from "../../Components/contTextHome/contTextHome"
-import Navbar from '../../Components/navbar/navbar'
+import MenuNavbar from '../../Components/navbar/navbar'
 import PrimaryButton from '../../Components/primaryButton/primaryButton'
 import './home.scss'
 import businessApi from "../../lib/businessApi"
+import Modal from 'react-bootstrap/Modal'
+import Button from 'react-bootstrap/Button'
 
 const Home = () => {
-    const navigate = useNavigate()
+    const [show, setShow] = useState(false)
+
+    const openModal = ()=> setShow(true)
+    const closeModal = ()=> setShow(false)
 
     const [business, setBusiness] = useState(null)
     
@@ -17,37 +21,29 @@ const Home = () => {
         let bringBusiness = async ()=> {
             let dataBusiness = await businessApi.getAllBusiness()
             setBusiness(dataBusiness)
-
             localStorage.setItem('dataBusiness',JSON.stringify(dataBusiness))
         } 
         bringBusiness()
     }, [])
     console.log(business)
-
-    const dataId = event => {
-        const value = event.target.value
-        
-        console.log('value',value)
-    }
     
     return (
         <div className='container'>
             <div className='row'>
-                < Navbar />
+                <MenuNavbar />
             </div>
-            <div className=" row d-flex ">
+            <div className="row d-flex">
                 {
                     business && !business.getBussines.length && < ContTextHome />
                 }
             </div>
-
-            <div className=" row d-flex " style={{marginTop: "5rem"}}>
+            <div className="row d-flex">
                 {
                     business && !!business.getBussines.length && business.getBussines.map(valueBusiness=>{
                         return (
                             <BusinessCard
                                 business={valueBusiness}
-                                idBusiness={dataId}
+                                openModal={openModal}
                             /> 
                         )
                     })
@@ -57,9 +53,22 @@ const Home = () => {
             <div className='row'>
                 < PrimaryButton />
             </div>
-       
-        </div>
 
+            <Modal show={show}>
+              <Modal.Header closeButton>
+                <Modal.Title>Modal heading</Modal.Title>
+              </Modal.Header>
+              <Modal.Body>Quieres eliminar tu negocio?</Modal.Body>
+              <Modal.Footer>
+                <Button variant="secondary" onClick={closeModal} >
+                  No
+                </Button>
+                <Button variant="primary" >
+                  Si
+                </Button>
+              </Modal.Footer>
+            </Modal>
+        </div>
     )
 }
 
