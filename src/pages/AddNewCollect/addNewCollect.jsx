@@ -11,8 +11,8 @@ const AddNewCollect = () => {
 
     const urlParsed = new URLSearchParams (search)
     const idBusiness = urlParsed.get('businessID')
-console.log('urlparced',urlParsed)
-console.log('idBusines', idBusiness)
+    console.log('urlparced',urlParsed)
+    console.log('idBusines', idBusiness)
     const [step, setStep] = useState(1) 
     const incremStep = () => setStep(step+1)
     const decrementStep = () => setStep(step-1)

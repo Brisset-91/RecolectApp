@@ -1,8 +1,6 @@
 /* eslint-disable import/no-anonymous-default-export */
-
-//const BASE_URL = 'https://recolectapp-b1aa4-default-rtdb.firebaseio.com'
-//const BASE_URL = 'http://localhost:8080'
-const BASE_URL = 'https://recolectappi-anxious-dugong-ea.mybluemix.net'
+const BASE_URL = "http://localhost:8000"
+console.log('BASE_URL',BASE_URL)
 
 export default {
 
